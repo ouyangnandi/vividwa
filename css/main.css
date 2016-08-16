@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-8-17, 0:17:57
+    Author     : Nandy
+*/
+
+video {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+
+    background-size: cover;
+}
+
+body>div{
+    height:100vh !important;
+}
+
+.fullWidth{
+    width:100%;
+}
+
+h5{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    font-family: Montserrat;
+    line-height: 84px;
+    text-transform: none;
+    letter-spacing: -4px;
+    word-spacing: 0px;
+    color: #28262b;
+    margin-bottom: 0;
+}
