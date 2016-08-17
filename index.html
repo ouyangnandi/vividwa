@@ -12,10 +12,9 @@ and open the template in the editor.
         <!--Import materialize.css-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
         <link type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection"/>
-        <link rel="stylesheet" type="text/css" href="css/blockScroll.css">
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
         <script src="js/jquery.scrollify.js"></script>
     </head>
@@ -25,9 +24,22 @@ and open the template in the editor.
         <script>
             $(document).ready(function() {
                 $('.parallax').parallax();
+                var left = $('#index0').offset().left;
+                $("#index0").css({left: left}).animate({"left": "0px"}, 400);
+
                 $.scrollify({
                     section: ".parallax-container",
+                    before: function(index, sections) {
+                        $("#index" + index).css({left: "-100%"});
+                    },
+                    after: function(index, sections) {
+                        var left = $('#index' + index).offset().left;
+                        $("#index" + index).css({left: left}).animate({"left": "0px"}, 400)
+                    }
+
                 });
+
+
             });
 
         </script>
@@ -35,10 +47,10 @@ and open the template in the editor.
         <div  class="parallax-container valign-wrapper" >
 
             <div class="section no-pad-bot fullWidth">
-                <div class="container">
+                <div class="container moveBar" id="index0" >
                     <div class="row center">
-                        <h5 class="header col s12 white-text">Luxury is personal</h5>
-                        <h4 class="white-text">We did most of the heavy lifting for you to provide a default stylings.</h4>
+                        <h5 class="header col s12 white-text">Luxury Personal Experience</h5>
+                        <h4 class="white-text">We are here to provide you an unique, tailor-made luxury travel experience in western Australia</h4>
                     </div>
                 </div>
             </div>
@@ -51,10 +63,10 @@ and open the template in the editor.
         <div class=" parallax-container valign-wrapper" >
 
             <div class="section no-pad-bot fullWidth">
-                <div class="container">
+                <div class="container moveBar" id="index1">
                     <div class="row center">
-                        <h5 class="header col s12 white-text">Luxury is personal</h5>
-                        <h4 class="white-text">We did most of the heavy lifting for you to provide a default stylings.</h4>
+                        <h5 class="header col s12 white-text">Limousine & Chauffeur Service</h5>
+                        <h4 class="white-text">We offer an efficient, safe and comfortable service with professional drivers to cater your transportation needs in our fleet of luxury cars. </h4>
                     </div>
                 </div>
             </div>
@@ -64,14 +76,38 @@ and open the template in the editor.
 
         <div class="parallax-container valign-wrapper" >
             <div class="section no-pad-bot fullWidth">
-                <div class="container">
+                <div class="container moveBar" id="index2">
                     <div class="row center">
-                        <h5 class="header col s12 white-text">Luxury is personasl</h5>
-                        <h4 class="white-text">We did most of the heavy lifting for you to provide a default stylings.</h4>
+                        <h5 class="header col s12 white-text"> Lifestyle Management Solutions</h5>
+                        <h4 class="white-text">To simplify your tight schedules and reduce stress. We arrange all kinds of requests, from standard services to more challenging requests. </h4>
                     </div>
                 </div>
             </div>
-            <div class="parallax"><img src="resources/nature1.jpg" alt="Unsplashed background img 2"></div>
+            <div class="parallax"><img src="resources/nature2.jpg" alt="Unsplashed background img 2"></div>
+        </div>
+
+        <div class="parallax-container valign-wrapper" >
+            <div class="section no-pad-bot fullWidth">
+                <div class="container moveBar" id="index3">
+                    <div class="row center">
+                        <h5 class="header col s12 white-text">Special Events Planning</h5>
+                        <h4 class="white-text">We can assist you in the creation, planning and supervision of an entire event, designed to fit your needs.</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax"><img src="resources/nature3.jpg" alt="Unsplashed background img 2"></div>
+        </div>
+
+        <div class="parallax-container valign-wrapper" >
+            <div class="section no-pad-bot fullWidth">
+                <div class="container moveBar" id="index4">
+                    <div class="row center">
+                        <h5 class="header col s12 white-text">Book With Us For Your Dream</h5>
+                        <h4 class="white-text"><a style="color:white" href="mailto:info@vividwa.com.au"><i class="material-icons" style="display:inline;font-size: 1rem;line-height: 30px;">email</i> info@vividwa.com.au</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax"><img src="resources/nature4.jpg" alt="Unsplashed background img 2"></div>
         </div>
 
     </body>
